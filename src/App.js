@@ -1,7 +1,17 @@
 import logo from './logo.svg';
 import './App.scss';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [msg, setMsg] = useState('Waiting for message...');
+
+  useEffect(() => {
+    fetch('/api')
+      .then(res => res.text())
+      .then(text => setMsg(text))
+      .catch(err => setMsg(`Error: ${err}`));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +27,7 @@ function App() {
         >
           Learn React
         </a>
+        <div>{msg}</div>
       </header>
     </div>
   );
