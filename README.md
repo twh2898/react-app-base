@@ -16,8 +16,11 @@ Default packages include
 
 This project depends on
 
+- NodeJS >= 16
 - Yarn
 - Python3
+- Python3 Pip
+- Python3 Venv
 
 ```sh
 git clone git@github.com:twh2898/react-app-base.git

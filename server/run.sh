@@ -1,3 +1,4 @@
 #!/bin/bash
 
-flask --app app --debug run
+source .venv/bin/activate
+flask --app server --debug run

@@ -1,7 +1,8 @@
 from flask import Flask, g
 import sqlite3
 
-DATABASE = './test.db'
+INIT_SQL = './init.sql'
+DATABASE = './main.db'
 
 app = Flask(__name__)
 
@@ -21,7 +22,7 @@ def get_db():
 
 with app.app_context():
     db = get_db()
-    with app.open_resource('init.sql', 'r') as f:
+    with app.open_resource(INIT_SQL, 'r') as f:
         db.executescript(f.read())
         db.commit()
 
