@@ -22,7 +22,13 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "concurrently": "^7.5.0"
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@types/uuid": "^9.0.0",
+    "concurrently": "^7.5.0",
+    "typescript": "^4.9.4"
   },
   "scripts": {
     "start": "concurrently \"cd server && ./run.sh\" \"react-scripts start\"",
